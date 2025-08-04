@@ -99,7 +99,7 @@ ORDER BY store_location;
 
 --  ADDITIONAL QUERIES BASED ON EXCEL-STYLE INSIGHTS
 
--- 4.11 Weekday vs Weekend Tagging (if not pre-tagged)
+-- 4.11 Weekday vs Weekend Tagging 
 -- You'd do this in Excel, but SQL could use CASE:
 SELECT *,
   CASE 
@@ -131,3 +131,4 @@ SELECT store_location, transaction_date, SUM(revenue) AS daily_store_revenue
 FROM coffeefactory
 GROUP BY store_location, transaction_date
 ORDER BY store_location, transaction_date;
+
